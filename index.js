@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const path = require('path')
+const PORT = process.env.PORT || 3000
 const multer = require('multer')
 const flash = require('connect-flash')
 const csrf = require('csurf')
@@ -60,4 +61,4 @@ app.use(shoppingRoute)
 //app.use(errorRoute)
 
 
-app.listen(3000)
+app.listen(PORT)
