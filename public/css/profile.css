@@ -171,7 +171,7 @@
 .orders_details input {
     background: none;
     padding: 0.35vw;
-    width: 45%;
+    width: 30%;
     border: 0.1vw solid #2f2f2f;
     font-size: 0.8vw;
     font-family: 'Monserrat',sans-serif;
@@ -182,9 +182,11 @@
     color: white;
 }
 .orders_details a {
-    width: 50%;
+    width: 30%;
     text-decoration: none;
     padding: 0.5vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
     border: 0.1vw solid #2f2f2f;
     font-size: 0.8vw;
     text-align: center;
