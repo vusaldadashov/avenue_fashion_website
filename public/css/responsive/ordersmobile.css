@@ -1,0 +1,34 @@
+@media all and (max-width: 800px) {
+    .body {
+        width: 100%;
+        margin-top: 10vw;
+        margin-bottom: 10vw;
+    }
+    .body_container {
+        width: 95%;
+        margin: auto;
+    }
+    .orders {
+        width: 100%;
+    }
+    .orders_items {
+        width: 100%;
+    }
+    .orders_items h5 {
+        font-size: 4vw;
+    }
+    .orders_items p {
+        font-size: 3.5vw;
+    }
+    .order_buttons {
+        width: 100%;
+        display: inherit;
+    }
+    .order_buttons input {
+        font-size: 3vw;
+        float: left;
+    }
+    .order_buttons a {
+        font-size: 3vw;
+    }
+}

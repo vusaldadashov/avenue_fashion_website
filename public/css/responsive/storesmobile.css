@@ -1,0 +1,94 @@
+@media all and (max-width:800px) {
+    .body {
+        width: 100%;
+        margin: 0;
+        border-bottom: 1px solid rgb(207, 207, 207);  
+    }
+    .stores {
+        width: 90%;
+        display: inherit;
+    }
+    .store1 {
+        padding: 0;
+        margin: 0;
+        border-bottom: 1px solid rgb(223, 223, 223);
+        padding-bottom: 4vw;
+    }
+    .store2 {
+        padding: 0;
+        margin: 0;
+        padding-bottom: 4vw;
+        border-bottom: 1px solid rgb(223, 223, 223);
+    }
+    .store3 {
+        padding: 0;
+        margin: 0;
+        height: 45vw;
+    }
+    .store_title {
+        font-size: 5vw;
+        margin-bottom: 1vw;
+    }
+    .store_address {
+        font-size: 4vw;
+    }
+    .store_description {
+        font-size: 3.5vw;
+    }
+    .view_button {
+        font-size: 3.5vw;
+        padding: 2vw;
+        margin: auto;
+    }
+    .stores_map {
+        width: 100%;
+        display: inherit;
+    }
+    .map {
+        width: 100%;
+        background-color: #f8f8f8;
+        margin: 0;
+        padding: 0;
+    }
+    .map iframe {
+        width: 100%;
+        height: 130vw;
+    }
+    .store_details_block {
+        width: 100%;
+        height: 100vw;
+    }
+    .store_details_container {
+        width: 90%;
+        margin: 0;
+        margin: auto;
+        padding-top: 3vw;
+    }
+    .contact_ways ul li {
+        font-size: 3.5vw;
+    }
+    .store_links {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .store_link {
+        width: 10vw;
+        height: 10vw;
+        font-size: 5vw;
+        margin: 4vw;
+        margin-bottom: 0;
+    }
+    .fb_link{
+        background-color: #4267B2;
+    }
+    .twit_link{
+        background-color: #1DA1F2;
+    }
+    .insta_link{
+        background-color: #E1306C;
+    }
+    .pin_link{
+        background-color: #E60023;
+    }
+}

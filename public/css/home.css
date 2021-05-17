@@ -1,0 +1,247 @@
+*{
+    margin:0;
+    padding: 0;
+    border: 0;
+}
+.head_bar{
+    width: 100%;
+    height: 2vw;
+    background-color: #333333;
+}
+.head_bar_container {
+    width:50%;
+    margin: auto;
+    display: flex;
+}
+.currency {
+    color: grey;
+    font-size: 0.8vw;
+    margin-top: 0.3vw;
+    width: 7vw;
+    margin-right: auto;
+}
+.register {
+    margin-top: 0.3vw;
+}
+.register ul {
+    display: flex;
+
+    color: grey;
+    font-size: 0.8vw;
+}
+.register ul li:last-child {
+    margin-left: 1vw;
+}
+.order {
+    width: 8vw;
+    height: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5vw;
+    font-size: 0.8vw;
+    color: white;
+    background-color:#00c8c8 ;
+}
+.order a {
+    background: none;
+    background: #00c8c8;
+    width: 4vw;
+    color: white;
+    font-size: 0.8vw;
+    margin-left: 0.5vw;
+}
+.register a {
+    text-decoration: none;
+    transition: color 0.5s;
+}
+li {
+    list-style: none;
+}
+.register a:hover {
+    color: white;
+}
+.header {
+    width: 100%;
+    height: 40vw;
+    background-image: url('../img/header.webp');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.header a {
+    text-decoration: none;
+}
+.head_bar a {
+    text-decoration: none;
+}
+.nav {
+    width:80%;
+    margin: auto;
+    padding-top: 2vw;
+    display: flex;
+}
+.logo {
+    font-family: 'Montserrat';
+    font-size: 1vw;
+}
+.categories {
+    margin-left:auto;
+}
+.categories ul {
+    display: flex;
+}
+.categories_title {
+    font-size: 1vw;
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 500;
+    color: #2f2f2f;
+    margin-left: 0.7vw;
+}
+.categories ul li a {
+    font-family: "Montserrat";
+}
+.search {
+    margin-left: 5vw;
+    width: 15vw;
+    height: 2vw;
+    border: 0.14vw solid #eeeeee;
+    background-color: #f8f8f8;
+    display: flex;
+    align-items: center;
+    font-size: 1vw;
+}
+.search input {
+    width: 12vw ;
+    margin-left: 1vw;
+    background-color: #f8f8f8;
+    font-size: 0.9vw;
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 500;
+    color: #737373;
+}
+.search a {
+    font-size: 0.9vw;
+    color: #737373;
+}
+.search input:focus{
+    outline: none;
+}
+.collection {
+   position: absolute;
+   top: 30vw;
+   left: 65%;
+   border: 0.14vw solid #737373;
+   padding: 0.7vw;
+   font-family: "Montserrat";
+   font-size: 1vw;
+   text-decoration: none;
+   transition: background-color 1s ease;
+}
+.collection:hover {
+    color: white;
+    background-color: grey;
+}
+.body {
+    width: 100%;
+    padding-top: 2.5vw;
+}
+.body_container {
+    width: 80%;
+    margin: auto;
+    border-top: 0.07vw solid #eeeeee ;
+    padding-top: 2.5vw;
+    padding-bottom: 2.5vw;
+    border-bottom:  0.07vw solid #eeeeee;
+}
+.body_categories {
+    width:100%;
+    padding-bottom: 2.5vw;
+}
+.body_categories ul {
+    display: flex;
+}
+.body_categories ul li {
+    font-size: 1vw;
+    font-family: "Montserrat";
+    margin-right: 2vw;
+}
+.body_categories ul li a {
+    text-decoration: none;
+    transition: color 1s;
+}
+.body_categories ul li a:hover {
+    color: #42d0d0;
+}
+.shops{
+    width:100%;
+}
+.cards {
+    width:100%;
+    display: flex;
+}
+.card1 {
+    width:25%;
+}
+.imageofcard{
+    width: 100%;
+    padding: 0.3vw;
+    padding-bottom: 0;
+}
+.imageofcard img {
+    width: 100%;
+    box-shadow: 3px 3px 3px rgb(233, 233, 233);
+}
+.imageofcard span {
+    font-size: 1.3vw;
+    font-family: 'Montserrat',sans-serif;
+    color: rgb(167, 167, 167);
+}
+.imageofcard span:nth-child(1) {
+    margin-left: 0.5vw;
+}
+.imageofcard span:nth-child(2) {
+    margin-left: 4vw;
+}
+.price{
+    position: absolute;
+    font-size: 2vw;
+}
+.description {
+    z-index: 1;
+    position: absolute;
+    width: 19.4%;
+    margin: 0.3vw;
+    background-color: white;
+    margin-top: 0;
+    box-shadow: 3px 3px 3px rgb(233, 233, 233);
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 1s, opacity 1s;
+}
+.description h4 {
+    font-size: 0.7vw;
+    font-weight: 600;
+    font-family: 'Montserrat',sans-serif;
+    margin-bottom: 0px;
+}
+.description p {
+    font-size: 0.64vw;
+    font-family: 'Montserrat',sans-serif;
+}
+.cardbuttons {
+    text-align: center;
+}
+.cardbuttons i {
+    padding: 0.5vw;
+    font-size: 0.8vw;
+    background-color: rgb(204, 204, 204);
+    color: white;
+    border-radius: 50%;
+    margin: 0.5vw;
+}
+.card1:hover > .description {
+    cursor: pointer;
+    visibility: visible;
+    opacity: 1;
+}

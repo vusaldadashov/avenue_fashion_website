@@ -1,0 +1,167 @@
+/* HEAD-BAR  */
+.categories_mobile {
+    display: none;
+}
+@media all and (max-width: 800px) {
+    .head_bar{
+        display: none;
+    }
+    .logo {
+        font-size: 5vw;
+        margin-left: 2vw;
+    }
+    .nav_toggle_container {
+        width: 100%;
+        position: absolute;
+        color: white;
+    }
+    .categories {
+        display: none;
+    }
+    .categories_mobile {
+        display: none;
+        width: 100%;
+        height: 80vw;
+        padding: 2vw;
+        padding-top: 5vw;
+        border-bottom: 1px solid grey;
+    }
+    .categories_mobile ul {
+        flex-direction: column;
+    }
+    .categories_title_mobile {
+        font-size: 5vw;
+        color: white;
+        letter-spacing: 1vw;
+        font-family: 'Montserrat';
+    }
+    .header {
+        width: 100%;
+        background-image: url('../../img/homeview.webp');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 140vw;
+    }
+    .nav {
+        width: 100%;
+    }
+    .search {
+        width: 26vw;
+        height: 5vw;
+        margin-top: 1vw;
+        padding-right: 1vw;
+        z-index: 1;
+    }
+    .search input {
+        font-size: 3vw;
+        width: 20vw;
+    }
+    .search a {
+        font-size: 3vw;
+    }
+    .nav_toggle {
+        width: 5vw;
+        margin-top: 1.5vw;
+        margin-left: 90%;
+    }
+    .nav_toggle_button {
+        width: 5vw;
+        height: 0.7vw;
+        background-color: #2f2f2f;
+        margin-bottom: 0.8vw;
+        transition: transform 1s;
+    }
+    .collection {
+        font-size: 5vw;
+        width: 55vw;
+        left: 20vw;
+        top:100vw;
+        text-align: center;
+    }
+    .body {
+        width: 100%;
+    }
+    .body_container {
+        width: 90%;
+    }
+    .body_categories {
+        width: 100%;
+        height: 25vw;
+    }
+    .body_categories ul {
+        display: inherit;
+    }
+    .body_categories ul li {
+        float: left;
+    }
+    .body_categories ul li:nth-child(1) {
+        width: 43%;
+    }
+    .body_categories ul li:nth-child(2){
+        width:43%;
+    }
+    .body_categories ul li:nth-child(3) {
+        width: 43%;
+    }
+    .body_categories ul li a {
+        font-size: 5vw;
+    }
+    .shops {
+        width: 100%;
+        display: inherit;
+    }
+    .cards {
+        width: 100%;
+        display: inherit;
+    }
+    .card1 {
+        background-color: #f8f8f8;
+        margin-bottom: 1vw;
+        width: 100%;
+    }
+    .description {
+        width: 100%;
+        margin: 0;
+        box-shadow: none;
+        position: static;
+        visibility: visible;
+        opacity: 1;
+        transition: none;
+        background:none
+    }
+    .description h4 {
+        font-size: 2.5vw;
+        padding-left: 1vw;
+        padding-right: 1vw;   }
+    .description p {
+        font-size: 2.3vw;
+    }
+    .cardbuttons {
+        width: 100%;
+        height: 7vw;
+    }
+    .cardbuttons a {
+        margin: 2vw;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .cardbuttons a i {
+        font-size: 3vw;
+        width: 5vw;
+        height: 5vw;
+        padding-left: 0;
+        padding: 1vw;
+    }
+    .imageofcard span {
+        font-size: 5vw;
+    }
+    .imageofcard span:nth-child(2) {
+        margin-left: 15vw;
+    }
+    .card1:hover > .imageofcard img {
+        box-shadow: none;
+    }
+    .logo_parent {
+        z-index: 1;
+    }
+}   

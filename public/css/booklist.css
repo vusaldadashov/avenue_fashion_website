@@ -1,0 +1,72 @@
+.booklist {
+    width:100%;
+    display: flex;
+    margin-top: 2.5vw;
+    text-align: right;
+    margin-bottom: 5vw;
+}
+.booklist img {
+    height: 22vw;
+    padding-top: 1.5vw;
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
+}
+.men_book {
+    margin-right: 1vw;
+    background-color: #f8f8f8;
+    display: flex;
+    width: 33%;
+}
+.book_description {
+    margin-top: 3vw;
+    margin-right: 3.2vw;
+}
+.women_book {
+    margin-right: 1vw;
+    background-color: #f8f8f8;
+    display: flex;
+    width: 33%;
+}
+.your_book {
+    display: flex;
+    background-color: #f8f8f8;
+    width: 33%;
+}
+.book_header_first {
+    font-family: 'Montserrat',sans-serif;
+    font-size: 3vw;
+    margin: 0;
+    padding: 0;
+    border:0;
+    color: #575153;
+}
+.book_header_second {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2vw;
+    margin: 0;
+    padding: 0;
+    border:0;
+    color: #575153;
+}
+.book_description p {
+    font-family:  Roboto, 'Open Sans' , sans-serif;
+    color: #7b7b7b;
+    font-size: 0.8vw;
+    margin-bottom: 2.5vw;
+}
+a.button{
+    padding: 0.9vw;
+    text-decoration: none;
+    border: 0.15vw solid #737373;
+    color: #454647 ;
+    font-family: 'Montserrat';
+    transition: background-color 1s;
+    letter-spacing: 0.1vw;
+    font-weight: bold;
+    font-size: 0.8vw;
+}
+a.button:hover{
+    background-color: #00c8c8;
+    color: white;
+    border:none;
+}

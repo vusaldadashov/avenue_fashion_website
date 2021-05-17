@@ -1,0 +1,234 @@
+.product_colors {
+    display: none;
+}
+@media all and (max-width: 800px) {
+    .body {
+        width: 100% ;
+    }
+    .product_body{
+        width: 90%;
+        margin: auto;
+        display: inherit;
+    }
+    .product_image {
+        width: 100%;
+    }
+    .product_details {
+        width: 100%;
+    }
+    .product_title h5 {
+        font-size:6vw;
+    }
+    .product_actions {
+        width: 100%;
+        display: inherit;
+    }
+    .rating {
+        width: 33%;
+        font-size: 3.5vw;
+        float: left;
+    }
+    .reviews {
+        width:33%;
+        font-size: 3.5vw;
+        float: left;
+    }
+    .reviews span {
+        border: none;
+    }
+    .add_review {
+        width: 33%;
+        font-size: 3.5vw;
+        float: left;
+        padding: 0;
+        margin: 0;
+    }
+    .add_review a {
+        border: none;
+        color: #00c8c8;
+        padding: 0;
+        margin: 0;
+    }
+    .share {
+        width: 100%;
+        padding: 0;
+    }
+    .share span {
+        font-size: 4.5vw;
+    }
+    .share a {
+        font-size: 5vw;
+        padding: 3vw;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .fb_link {
+        color: #4267B2;
+    }
+    .twit_link {
+        color: #1DA1F2;
+    }
+    .insta_link{
+        color: #E1306C;
+    }
+    .pin_link {
+        color: #E60023;
+    }
+    .go_plus_link{
+        color: #db4a39;
+    }
+    .mail_link {
+        color: #000080;
+    }
+    .price {
+        width: 100%;
+        margin-top: 0;
+    }
+    .price span {
+        font-size: 8vw;
+    }
+    .current_price {
+        color: red;
+        margin-left: 3vw;
+    }
+    .product_condition {
+        width: 100%;
+    }
+    .current_condition {
+        font-size: 3.5vw;
+    }
+    .current_condition span {
+        font-size: 3.5vw;
+    }
+    .product_code {
+        font-size: 3.5vw;
+    }
+    .product_code span {
+        font-size: 3.5vw;
+    }
+    .product_tags {
+        font-size: 3.5vw;
+    }
+    .product_tags span {
+        font-size: 3.5vw;
+    }
+    .product_quality {
+        width: 100%;
+    }
+    .quality_text {
+        font-size: 3vw;
+    }
+    .qualities {
+        font-size: 3vw;
+    }
+    .product_order {
+        width: 100%;
+    }
+    .product_types {
+        width: 100%;
+        display: inherit;
+    }
+    .product_color {
+        width: 100%;
+        display: flex;
+        margin-bottom: 1vw;
+    }
+    .product_color h5 {
+        display: none;
+    }
+    .product_color select {
+        display: none;
+    }
+    .product_colors {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        font-size: 3.5vw;
+        font-family: 'Montserrat',sans-serif;
+        font-weight: 500;
+        color: #2f2f2f;
+    }
+    .product_colors a {
+        text-decoration: none;
+        margin: 2vw;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 0;
+        font-weight: 600;
+    }
+    .product_size {
+        width: 100%;
+        margin-bottom: 1vw;
+    }
+    .product_size h5 {
+        display: none;
+    }
+    .product_size select {
+        display: none;
+    }
+    .product_quantity {
+        width: 100%;
+    }
+    .product_quantity h5 {
+        display: none;
+    }
+    .product_quantity input {
+        display: none;
+    }
+    .adding_orders {
+        width: 100%;
+    }
+    .adding_order {
+        width: 100%;
+        display: inherit;
+    }
+    .addtocart {
+        width: 100%;
+        margin-bottom: 2vw;
+    }
+    .addtocart i {
+        font-size: 6vw;
+    }
+    .cartbutton {
+        font-size: 6vw;
+    }
+    .addtolookbook {
+        width: 100%;
+    }
+    .addtolookbook i {
+        font-size: 6vw;
+    }
+    .addtocompare {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .addtocompare input {
+        font-size: 4.5vw;
+    }
+    .addtocompare i {
+        width: 6.5vw;
+        height: 6.5vw;
+        font-size: 5vw;
+    }
+    .product_extra_body {
+        width: 100%;
+        margin-top: 2vw;
+    }
+    .product_extra_body ul {
+        height: 15vw;
+        display: inherit;
+    }
+    .extra_body_navlinks {
+        font-size: 4vw;
+        height: 5vw;
+        float: left;
+        width: 50%;
+    }
+    .product_extra_body h5 {
+        font-size: 3vw;
+    }
+    .product_extra_body p {
+        font-size: 3vw;
+    }
+}

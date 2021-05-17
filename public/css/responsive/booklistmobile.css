@@ -1,0 +1,38 @@
+@media all and (max-width: 800px) {
+    .booklist {
+        width: 100%;
+        display: inherit;
+    }
+    .men_book {
+        width: 100%;
+        margin-bottom: 2vw;
+    }
+    .women_book {
+        width: 100%;
+        margin-bottom: 2vw;
+    }
+    .your_book {
+        width: 100%;
+    }
+    .booklist_image {
+        width: 40%;
+    }
+    .book_description {
+        width: 60%;
+    }
+    .booklist_image img {
+        height: 60vw;
+    }
+    .book_header_first {
+        font-size: 6vw;
+    }
+    .book_header_second {
+        font-size: 6vw;
+    }
+    .book_description p {
+        font-size: 3vw;
+    }
+    .booklist a.button {
+        font-size: 4vw;
+    }
+}

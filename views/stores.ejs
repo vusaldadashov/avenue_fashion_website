@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVENUE FASHION</title>
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/card.css">
+    <link rel="stylesheet" href="/css/stores.css">
+    <link rel="stylesheet" href="/css/responsive/headermobile.css">
+    <link rel="stylesheet" href="/css/responsive/footermobile.css">
+    <link rel="stylesheet" href="/css/responsive/storesmobile.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://kit.fontawesome.com/0a81482c91.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!--Head bar currency and cart-->
+<%- include('partials/header.ejs') %>
+
+<!-- BODY -->
+    <div class="body">
+             <div class="stores">
+            <div class="store1">
+                <h5 class="store_title">LONDON</h5>
+                <p class="store_address">180-182 Regent Street, London, W1B 5BT</p>
+                <p class="store_description">Lorem ipsum dolor sit amet,
+                     consectetur adipiscing esi elit. Vivamus at arcu sem. 
+                     Vestibulum ornare eleifendit massa, nec tempor odio.
+                      Fusce posuere nunc iaculis ligula viverra iaculis.
+                       Aliquam erat volutpat.</p>
+                <a class="view_button" href="/stores/london">VIEW DETAILS</a>
+            </div>
+            <div class="store2">
+                <h5 class="store_title">NEW YORK</h5>
+                <p class="store_address">109 Columbus Circle, New York, NY 10023</p>
+                <p class="store_description">Nunc non posuere nisl.
+                     Etiam finibus vel dui nec lobortis.
+                      Aliquam egestas, sem quis condimentum venenatis, 
+                      erat leo fermentum dolor, non sollicitudin massa mi eu nibh. 
+                      Nullam vitae aliquam dui, non sodales nisl.</p>
+                <a class="view_button" href="/stores/newyork">VIEW DETAILS</a>
+            </div>
+            <div class="store3">
+                <h5 class="store_title">PARIS</h5>
+                <p class="store_address">2133 Rue Saint-Honoré, 75001 Paris</p>
+                <p class="store_description">Ut interdum fermentum blandit. 
+                    Donec nec lacus egetit mi rhoncus eleifend. 
+                    Curabitur laoreet nisl eget rutruml auctor. 
+                    Vestibulum ante ipsum primis in faucibus orcip luctus 
+                    et ultrices posuere cubilia curae cras ligula.</p>
+                <a class="view_button" href="/stores/paris">VIEW DETAILS</a>
+            </div>
+             </div>
+        <% if(storeName == 'london') { %>
+            <div class="stores_map">
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d158858.47340138938!2d-0.24168153443090962!3d51.528558241258565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2zTG9uZG9uLCBCaXJsyZnFn21pxZ8gS3JhbGzEsXE!5e0!3m2!1saz!2s!4v1618388850462!5m2!1saz!2s" 
+                 style="border:0;" 
+                allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="store_details_block">
+                <div class="store_details_container">
+                    <div class="store_details">
+                        <h5 class="store_title">LONDON</h5>
+                        <p class="store_address">180-182 Regent Street, London, W1B 5BT</p>
+                        <p class="store_description">Lorem ipsum dolor sit amet,
+                            consectetur adipiscing esi elit. Vivamus at arcu sem. 
+                            Vestibulum ornare eleifendit massa, nec tempor odio.
+                             Fusce posuere nunc iaculis ligula viverra iaculis.
+                              Aliquam erat volutpat.</p>
+                    </div>
+                    <div class="contact_ways">
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt"></i> 180-182 Regent Street, London, W1B 5BT</li>
+                            <li><i class="fas fa-phone-alt"></i> 0123-456-789</li>
+                            <li><i class="fas fa-link"></i> www.yourwebsite.com</li>
+                            <li><i class="far fa-envelope"></i> support@yourwebsite.com</li>
+                            <li><i class="far fa-clock"></i> Monday-Friday: 9am to 6pm  Saturday: 10am to 6pm  Sunday: 10am to 2pm</li>
+                        </ul>
+                    </div>
+                    <div class="store_links">
+                        <a class="store_link fb_link" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="store_link twit_link" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="store_link insta_link" href="#"><i class="fab fa-instagram"></i></a>
+                        <a class="store_link pin_link" href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        <% } else if(storeName == 'newyork') { %>
+            <div class="stores_map">
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387190.279909073!2d-74.25987368715491!3d40.69767006458873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2zTnl1LVlvcmssIE55dSBZb3JrLCBBbWVyaWthIEJpcmzJmcWfbWnFnyDFnnRhdGxhcsSx!5e0!3m2!1saz!2s!4v1620062150482!5m2!1saz!2s" 
+                     style="border:0;" 
+                    allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div class="store_details_block">
+                    <div class="store_details_container">
+                        <div class="store_details">
+                            <h5 class="store_title">NEW YORK</h5>
+                            <p class="store_address">180-182 Regent Street, NEW YORK, W1B 5BT</p>
+                            <p class="store_description">Lorem ipsum dolor sit amet,
+                                consectetur adipiscing esi elit. Vivamus at arcu sem. 
+                                Vestibulum ornare eleifendit massa, nec tempor odio.
+                                 Fusce posuere nunc iaculis ligula viverra iaculis.
+                                  Aliquam erat volutpat.</p>
+                        </div>
+                        <div class="contact_ways">
+                            <ul>
+                                <li><i class="fas fa-map-marker-alt"></i> 180-182 Regent Street, NEW YORK, W1B 5BT</li>
+                                <li><i class="fas fa-phone-alt"></i> 0123-456-789</li>
+                                <li><i class="fas fa-link"></i> www.yourwebsite.com</li>
+                                <li><i class="far fa-envelope"></i> support@yourwebsite.com</li>
+                                <li><i class="far fa-clock"></i> Monday-Friday: 9am to 6pm  Saturday: 10am to 6pm  Sunday: 10am to 2pm</li>
+                            </ul>
+                        </div>
+                        <div class="store_links">
+                            <a class="store_link fb_link" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="store_link twit_link" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="store_link insta_link" href="#"><i class="fab fa-instagram"></i></a>
+                            <a class="store_link pin_link" href="#"><i class="fab fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <% } else if(storeName == 'paris') { %>
+            <div class="stores_map">
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83998.75769393813!2d2.2770197739280196!3d48.858950681374274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis%2C%20Fransa!5e0!3m2!1saz!2s!4v1620062618198!5m2!1saz!2s" 
+                         style="border:0;" 
+                        allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    <div class="store_details_block">
+                        <div class="store_details_container">
+                            <div class="store_details">
+                                <h5 class="store_title">PARIS</h5>
+                                <p class="store_address">180-182 Regent Street, Paris, W1B 5BT</p>
+                                <p class="store_description">Lorem ipsum dolor sit amet,
+                                    consectetur adipiscing esi elit. Vivamus at arcu sem. 
+                                    Vestibulum ornare eleifendit massa, nec tempor odio.
+                                     Fusce posuere nunc iaculis ligula viverra iaculis.
+                                      Aliquam erat volutpat.</p>
+                            </div>
+                            <div class="contact_ways">
+                                <ul>
+                                    <li><i class="fas fa-map-marker-alt"></i> 180-182 Regent Street, Paris, W1B 5BT</li>
+                                    <li><i class="fas fa-phone-alt"></i> 0123-456-789</li>
+                                    <li><i class="fas fa-link"></i> www.yourwebsite.com</li>
+                                    <li><i class="far fa-envelope"></i> support@yourwebsite.com</li>
+                                    <li><i class="far fa-clock"></i> Monday-Friday: 9am to 6pm  Saturday: 10am to 6pm  Sunday: 10am to 2pm</li>
+                                </ul>
+                            </div>
+                            <div class="store_links">
+                                <a class="store_link fb_link" href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a class="store_link twit_link" href="#"><i class="fab fa-twitter"></i></a>
+                                <a class="store_link insta_link" href="#"><i class="fab fa-instagram"></i></a>
+                                <a class="store_link pin_link" href="#"><i class="fab fa-pinterest"></i></a>
+                            </div>
+                        </div>
+                    </div>
+             </div>
+                <% } %>
+    </div>
+
+    <!-- FOOTER OF WEBSITE-->
+    <%- include('partials/footer.ejs') %>
+</body>
+</html>

@@ -1,0 +1,84 @@
+/* HEAD-BAR  */
+.categories_mobile {
+    display: none;
+}
+@media all and (max-width: 800px) {
+    .head_bar{
+        display: none;
+    }
+    .logo {
+        font-size: 5vw;
+        margin-left: 2vw;
+    }
+    .logo_parent {
+        z-index: 1;
+    }
+    .nav_toggle_container {
+        width: 100%;
+        position: absolute;
+        color: white;
+    }
+    .categories {
+        display: none;
+    }
+    .categories_mobile {
+        display: none;
+        width: 100%;
+        height: 80vw;
+        padding: 2vw;
+        border-bottom: 1px solid grey;
+    }
+    .categories_mobile ul {
+        flex-direction: column;
+    }
+    .categories_title_mobile {
+        font-size: 5vw;
+        color: white;
+        letter-spacing: 1vw;
+        font-family: 'Montserrat';
+    }
+    .header {
+        width: 100%;
+    }
+    .nav {
+        width: 100%;
+    }
+    .search {
+        width: 26vw;
+        height: 5vw;
+        margin-top: 1vw;
+        padding-right: 1vw;
+        z-index: 1;
+    }
+    .search input {
+        font-size: 3vw;
+        width: 20vw;
+    }
+    .search a {
+        font-size: 3vw;
+    }
+    .nav_toggle {
+        width: 5vw;
+        margin-top: 1.5vw;
+        margin-left: 90%;
+    }
+    .nav_toggle_button {
+        width: 5vw;
+        height: 0.7vw;
+        background-color: #2f2f2f;
+        margin-bottom: 0.8vw;
+        transition: transform 1s;
+    }
+    .brand_view {
+        width: 100%;
+        height: 100vw;
+        background-image: url('../../img/brandviewmobile.webp');
+        background-repeat: no-repeat;
+    }
+    .brand_title {
+        font-size: 7vw;
+    }
+    .brand_slogan {
+        font-size: 5vw;
+    }
+}    

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avenue Fashion</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/books.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/booklist.css">
+    <link rel="stylesheet" href="css/responsive/headermobile.css">
+    <link rel="stylesheet" href="css/responsive/footermobile.css">
+    <link rel="stylesheet" href="css/responsive/lookbookmobile.css">
+    <link rel="stylesheet" href="css/responsive/booklistmobile.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://kit.fontawesome.com/0a81482c91.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!--Head bar currency and cart-->
+    <%- include('partials/header.ejs') %>
+
+<!-- BODY PART OR PRODUCTS -->
+    <div class="body">
+        <div class="body_container">
+            <div class="body_categories">
+                <ul>
+                    <li><a href="#">POPULAR</a></li>
+                    <li><a href="#">NEW ARRIVES</a></li>
+                    <li><a href="#">BEST SELLERS</a></li>
+                    <li><a href="#">SPECIAL OFFERS</a></li>
+                    <li><a href="#">COMING SOON</a></li>
+                </ul>
+            </div>
+            <div class="body_contents">
+                <div class="content_rows">
+                    <div class="image_content_small content1">
+                        <div class="image_hover">
+                            <a href="#"><i class="fas fa-info-circle"></i></a>
+                            <a href="#"><i class="far fa-heart"></i></a>
+                        </div>
+                        <img src="../img/card1.1.webp" alt="">
+                    </div>
+                    <div class="image_content_small content2">
+                        <div class="image_hover">
+                            <a href="#"><i class="fas fa-info-circle"></i></a>
+                            <a href="#"><i class="far fa-heart"></i></a>
+                        </div>
+                        <img src="../img/card1.2.webp" alt="">
+                    </div>
+                    <div class="image_content_medium">
+                        <div class="medium_image_details">
+                            <h6 class="image_title"><strong>JANE'S</strong> LOOKBOOK</h6>
+                            <p class="image_slogan">get the look for under £200!</p>
+                            <p class="image_description1">We invited actress Jane Marshall to join us 
+                                for the day and choose her perfect outfit from 
+                                our vast range of womens fashion.
+                            </p>
+                            <p class="image_description2">  This is of course not true as this is just a design 
+                                for a website and this is simply filler text.</p>
+                            <a class="button" href="#">VIEW NOW</a>
+                        </div>
+                        <img src="../img/mediumimage1.webp" alt="">
+                    </div>
+                </div>
+                <div class="content_rows">
+                    <div class="image_content_small content4">
+                        <div class="image_hover">
+                            <a href="#"><i class="fas fa-info-circle"></i></a>
+                            <a href="#"><i class="far fa-heart"></i></a>
+                        </div>
+                        <img src="../img/smallimage2.webp" alt="">
+                    </div>
+                    <div class="image_content_small">
+                        <div class="image_hover">
+                            <a href="#"><i class="fas fa-info-circle"></i></a>
+                            <a href="#"><i class="far fa-heart"></i></a>
+                        </div>
+                        <img src="../img/smallimage3.webp" alt="">
+                    </div>
+                    <div class="image_content_small">
+                        <div class="image_hover">
+                            <a href="#"><i class="fas fa-info-circle"></i></a>
+                            <a href="#"><i class="far fa-heart"></i></a>
+                        </div>
+                        <img src="../img/card1.3.webp" alt="">
+                    </div>
+                    <div class="image_content_small">
+                        <div class="image_hover">
+                            <a href="#"><i class="fas fa-info-circle"></i></a>
+                            <a href="#"><i class="far fa-heart"></i></a>
+                        </div>
+                        <img src="../img/card1.4.webp" alt="">
+                    </div>
+                </div>
+                <div class="content_rows">
+                    <div class="image_content_large">
+                        <div class="medium_image_details">
+                            <h6 class="image_title"><strong>WIN</strong> A NEW LOOK</h6>
+                            <p class="image_slogan">add looks or items to your lookbook for a chance of winning </p>
+                            <p class="image_description1">See an item or a complete look you like, click the button to add it to your 
+                                lookbook and you’ll be automatically entered to our monthly draw where 
+                                one winner gets a £300 gift voucher to spend on our website!  
+                            </p>
+                            <p class="image_description2">Terms: No purchase necessary. Vouchers are non-transferable and no 
+                                cash alternative is ofered. Competition is for members only.</p>
+                            <a class="button" href="#">VIEW NOW</a>
+                        </div>
+                        <div class="large_image_win">
+                            <h1>WIN</h1>
+                            <h4>A NEW LOOK</h4>
+                        </div>
+                        <img src="../img/largeimage1.webp" alt="">
+                    </div>
+                    <div class="image_content_small_end">
+                        <div class="image_hover">
+                            <a href="#"><i class="fas fa-info-circle"></i></a>
+                            <a href="#"><i class="far fa-heart"></i></a>
+                        </div>
+                        <img src="../img/smallimage1.webp" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--BOOKS FOR MENS WOMENS YOU-->
+    <%- include('partials/booklist.ejs') %>
+<!-- FOOTER OF WEBSITE-->
+    <%- include('partials/footer.ejs') %>
+    <script src="/js/home.js"></script>
+</body>
+</html>

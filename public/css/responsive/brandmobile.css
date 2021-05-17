@@ -1,0 +1,25 @@
+@media all and (max-width: 800px) {
+    .body {
+        width: 100%;
+        flex-direction: column;
+    }
+    .body_part1 {
+        width: 90%;
+        margin: auto;
+        padding: 0px;
+    }
+    .body_part2 {
+        width: 90%;
+        margin: auto;
+        padding: 0;
+    }
+    .brand_description h5 {
+        font-size: 4.5vw;
+    }
+    .brand_description p.title_first_child {
+        font-size: 2.5vw;
+    }
+    .brand_description p.title_last_child {
+        font-size: 2.5vw;
+    }
+}

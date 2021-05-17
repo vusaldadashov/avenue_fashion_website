@@ -1,0 +1,40 @@
+.body {
+    width: 60%;
+    margin: auto;
+    display: flex;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+}
+.body_part1 {
+    padding-right: 2vh;
+}
+.body_part2 {
+    padding-left: 2vh;
+}
+.body img {
+    width: 100%;
+    margin-bottom: 1vw;
+}
+.brand_description {
+    margin-bottom: 2vw;
+}
+.brand_description h5 {
+    text-transform: uppercase;
+    color: #2f2f2f;
+    font-size: 1.1vw;
+    font-weight: 500;
+}
+.brand_description p.title_first_child{
+    color: #505050;
+    font-size: 0.8vw;
+    margin-bottom: 1vw;
+    text-transform: uppercase;
+}
+.body_link{
+    text-decoration: none;
+    color: #33d3d3;
+}
+.brand_description p.title_last_child{
+    color: #8e8c8c;
+    font-size: 0.8vw;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AVENUE FASHION</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/signup.css">
+    <link rel="stylesheet" href="css/responsive/signupmobile.css">
+    <link rel="stylesheet" href="css/responsive/headermobile.css">
+    <link rel="stylesheet" href="css/responsive/footermobile.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://kit.fontawesome.com/0a81482c91.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!--Head bar currency and cart-->
+    <%- include('partials/header.ejs') %>
+
+<!-- BODY -->
+    <div class="body">
+        <% if(isLogin == 'signin') { %>
+        <div class="signin">
+            <h5 class="signup_title">SIGN IN</h5>
+            <form action="/login" method="POST">
+                <% if(errorMessage) { %>
+                    <div class="errorMessage"><%= errorMessage %></div><% } %>
+                <input class="body_input" type="email" name="email" class="email" placeholder="Your Email..">
+                <input class="body_input" type="password" name="password" class="password" placeholder="Your Password..">
+                <div class="form_submit">
+                    <input type="submit" value="SIGN IN">
+                    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                    <a class="forgetpassword" href="/resetpassword">Forgot your Password</a>
+                </div>
+            </form>
+        </div>
+        <% } else if(isLogin == 'signup')  { %>
+        <div class="signup">
+            <h5 class="signup_title">REGISTER</h5>
+            <form action="/signup" method="POST">
+                <% if(errorMessage) { %>
+                    <div class="errorMessage"><%= errorMessage %></div><% } %>
+                <input class="body_input" type="text" name="name" id="" placeholder="Name..">
+                <input class="body_input" type="text" name="surname" id="" placeholder="Surname..">
+                <input class="body_input" type="text" name="username" id="" placeholder="Username..">
+                <input class="body_input" type="email" name="email" class="email" placeholder="Your Email..">
+                <input class="body_input" type="password" name="password" class="email" placeholder="New Password..">
+                <input class="body_input" type="password" name="confirmpassword" class="password" placeholder="Confirm Password..">
+                <input type="checkbox" id="agreement" name="agreement" value="agree">
+                <span class="agreement"> Sign up for exclusive updates, discounts, new arrivals, contests, and more!</span>
+                <div class="form_submit">
+                    <input type="submit" value="CREATE ACCOUNT">
+                    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                    <span class="body_policy" href="#">By clicking 'Create Account', you agree to our <a href="#">Privacy Policy</a></span>
+                </div>
+            </form>
+        </div>
+        <% } else { %>
+            <div class="signin">
+                <form action="/resetpassword" method="POST">
+                    <input class="body_input" type="email" placeholder="Email" name="email">
+                    <div class="form_submit">
+                        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                        <input  type="submit" value="RESET">
+                    </div>
+                </form>
+            </div>
+            <% } %>
+    </div>
+
+    <!-- FOOTER OF WEBSITE-->
+    <%- include('partials/footer.ejs') %>
+       
+    <script src="../public/js/home.js"></script>
+</body>
+</html>

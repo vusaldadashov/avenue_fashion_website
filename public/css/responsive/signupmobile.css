@@ -1,0 +1,50 @@
+@media all and (max-width: 800px) {
+    .body {
+        width: 100%;
+        flex-direction: column;
+    }
+    .signin {
+        width: 90%;
+        margin: auto;
+        border: none;
+    }
+    .signup_title {
+        font-size: 6vw;
+        text-align: center;
+    }
+    .body_input {
+        font-size: 3vw;
+        padding: 2vw;
+    }
+    .form_submit {
+        width: 100%;
+    }
+    .form_submit input {
+        font-size: 3vw;
+        letter-spacing: 1vw;
+        padding: 2vw;
+    }
+    .form_submit a {
+        font-size: 3vw;
+    }
+    .signup {
+        width: 90%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    #agreement {
+        transform: scale(2);
+        margin-left: 2vw;
+        margin-top: 2vw;
+    }
+    .agreement {
+        font-size: 2.5vw;
+        margin-left: 1vw;
+    }
+    .body_policy {
+        font-size: 3vw;
+        width: 100%;
+        margin-top: 1vw;
+    }
+}

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVENUE FASHION</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/responsive/headermobile.css">
+    <link rel="stylesheet" href="css/responsive/footermobile.css">
+    <link rel="stylesheet" href="css/responsive/profilemobile.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://kit.fontawesome.com/0a81482c91.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="head_bar">
+        <div class="head_bar_container">
+            <div class="currency">
+                <label for="currency">Currency:</label>
+                <span>USD</span>
+            </div>
+            <div class="register">
+                <ul class="row">
+                    <li class="col"><a href="/logout">Log out</a></li>
+                </ul>
+            </div>
+            <div class="order">
+                <i class="fas fa-shopping-cart"></i>
+                    <%  if(isLoggedIn) { %>
+                        <a href="/orders"><%= user.cart.length %> items</a>
+                    <% }  else { %>
+                    <a href="/orders">Empty</a>
+                    <% } %>
+            </div>
+    </div>
+    </div>
+    <!-- HEADER AND VIEW OF WEBSITE-->
+    <div class="header">
+    <div class="nav">
+        <div class="logo_parent"><a href="/" class="logo"><strong>AVENUE</strong> FASHION</a></div>
+        <div class="categories">
+             <ul>
+            <li class="categories_title"><a href="#">Men</a></li>
+            <li class="categories_title"><a href="#">Women</a></li>
+            <div class="womens_category"></div>
+            <li class="categories_title"><a href="/brand">The Brand</a></li>
+            <div class="brands_category"></div>
+            <li class="categories_title"><a href="/stores/london">Local Stores</a></li>
+            <div class="stores_category"></div>
+            <li class="categories_title"><a href="/lookbook">Look Book</a></li>
+            <div class="books_category"></div>
+        </ul>
+        </div>
+        <div class="search">
+            <form action="" method="post">
+                <input type="text" name="search" id="searchBox" placeholder="Search...">
+                <a href="#"><i class="fas fa-search"></i></a>
+            </form>
+        </div>
+        <div class="nav_toggle_container" id="nav_toggle_container">
+            <div onclick="collapse()" class="nav_toggle" id="nav_toggle">
+                <div class="nav_toggle_button rotation1" id="rotate1"></div>
+                <div class="nav_toggle_button" id="rotate2"></div>
+                <div class="nav_toggle_button rotation2" id="rotate3"></div>
+            </div>
+            <div class="categories_mobile" id="categories_mobile">
+                <ul>
+                    <% if(isLoggedIn) { %>
+                        <li class="categories_title_mobile"><a href="/profile">Profile</a></li><% } %>
+                        <li class="categories_title_mobile"><a href="/orders">Cart</a></li>
+                        <li class="categories_title_mobile"><a href="/mens">Men</a></li>
+                        <li class="categories_title_mobile"><a href="/womens">Women</a></li>
+                        <li class="categories_title_mobile"><a href="/brand">The Brand</a></li>
+                        <li class="categories_title_mobile"><a href="/stores/london">Local Stores</a></li>
+                        <li class="categories_title_mobile"><a href="/lookbook">Look Book</a></li>
+                        <% if(isLoggedIn) { %>
+                        <li class="categories_title_mobile"><a href="/logout">Log Out</a></li><% } else { %>
+                        <li class="categories_title_mobile"><a href="/login">Sign In</a></li>
+                        <li class="categories_title_mobile"><a href="/signup">Sign Up</a></li>
+                        <% } %>
+           </ul>
+           </div>
+        </div>
+    </div>
+    </div>
+<!-- Body of website -->
+    <div class="body">
+        <div class="body_container">
+            <div class="body_part1">
+                <div class="profile_image"><%= user.name[0] %></div>
+                <ul class="info_nav">
+                    <li id="info" onclick="linkActive('9')"><a ><i class="far fa-address-card"></i>  User Info</a></li>
+                    <li id="order" onclick="linkActive('13')"><a ><i class="fas fa-shopping-bag"></i>  Orders</a></li>
+                    <li id="favorites" onclick="linkActive('17')"><a ><i class="far fa-heart"></i>  Favorites</a></li>
+                    <li id="setting" onclick="linkActive('21')"><a ><i class="fas fa-sliders-h"></i>  Setting</a></li>
+                    <li onclick="linkActive('25')"><a href="/logout"><i class="fas fa-sign-out-alt"></i> Log out</a></li>
+                </ul> <span id="link_active" class="link_active"></span>
+                <ul class="info_nav_mobile" >
+                    <li id="info" onclick="linkActive('9')"><a ><i class="far fa-address-card"></i></a></li>
+                    <li id="order" onclick="linkActive('13')"><a ><i class="fas fa-shopping-bag"></i></a></li>
+                    <li id="favorites" onclick="linkActive('17')"><a ><i class="far fa-heart"></i></a></li>
+                    <li id="setting" onclick="linkActive('21')"><a ><i class="fas fa-sliders-h"></i></a></li>
+                    <li onclick="linkActive('25')"><a href="/logout"><i class="fas fa-sign-out-alt"></i></a></li>
+                </ul>
+            </div>
+            <div class="body_part2">
+                <div class="profile_info" id="profile_info">
+                    <h2 class="profile_alt_title">User Informations</h2>
+                    <label for="user_name">Name: </label>
+                    <input id="user_name" type="text" value="<%= user.name %>"><br>
+                    <label for="user_surname">Surname: </label>
+                    <input id="user_surname" type="text" value="<%= user.surname %>"><br>
+                    <label for="user_email">Email: </label>
+                    <input id="user_email" type="email" value="<%= user.email %>"><br>
+                    <label for="user_postalcode">Postal Code: </label>
+                    <input id="user_postalcode" type="text" value="<%= user.postalCode %>" placeholder="Add Post Code"><br>
+                    <label for="user_phone">Phone: </label>
+                    <input id="user_phone" type="text" value="<%= user.phone %>" placeholder="Add Phone Number"><br>
+                    <label for="user_address">Address: </label>
+                    <input id="user_address" type="text" value="<%= user.address %>" placeholder="Add Your Address"><br>
+                    <input id="csrf_token" type="hidden" name="_csrf" value="<%= csrfToken %>">
+                    <input type="button" value="Save Changes" onclick="updateUser()"><span id="save_explanation"></span>
+                </div>
+                <div class="profile_orders" id="profile_orders">
+                    <h2 class="profile_alt_title">User Orders</h2>
+                    <% if(user) { if(user.orders.length > 0) { for(let order=0; order < user.orders.length; order++ ) { %>
+                        <div class="orders" id="a<%= order %>">
+                            <form action="/postorder" method="POST">
+                                <div class="orders_image">
+                                <% if(user.orders[order].images.length > 1) { for(let num = 0; num < user.orders[order].images.length;num++) { %>
+                                    <img src="<%= user.orders[order].images[num] %>" alt="">
+                                <% } } else { %>
+                                    <img src="<%= user.orders[order].images[0] %>" alt="">
+                                    <% } %>
+                                </div>
+                                <div class="orders_details">
+                                    <div class="orders_items">
+                                        <h5><%= user.orders[order].name %></h5>
+                                        <p>$<%= user.orders[order].price.currentPrice %></p>
+                                    </div>
+                                    <div class="orders_buttons">
+                                        <input type="submit" value="CANCEL ORDER">
+                                        <input type="button" onclick="deleteOrder('<%= order %>', '<%= csrfToken %>')" value="DELETE ORDER">
+                                        <a href="/compareorder/<%= order %>">CHANGE DETAILS</a>
+                                    </div> 
+                                </div>
+                            </form>
+                        </div>
+                        <% } } else { %>
+                            <h3>You don't have any order, please make sure products added in right way!</h3>
+                        <% } } else { %>
+                            <h3>You should sign in to get orders!</h3>
+                            <% } %>
+                </div>
+                <div class="profile_favorites" id="profile_favorites">
+                    <h2 class="profile_alt_title">Favorites</h2>
+                    <% if(user) { if(user.favorites.length > 0) { for(let order=0; order < user.facorites.length; order++ ) { %>
+                        <div class="orders" id="a<%= order %>">
+                            <form action="/postorder" method="POST">
+                                <div class="orders_image">
+                                <% if(user.favorites[order].images.length > 1) { for(let num = 0; num < user.favorites[order].images.length;num++) { %>
+                                    <img src="<%= user.favorites[order].images[num] %>" alt="">
+                                <% } } else { %>
+                                    <img src="<%= user.favorites[order].images[0] %>" alt="">
+                                    <% } %>
+                                </div>
+                                <div class="orders_details">
+                                    <div class="orders_items">
+                                        <h5><%= user.favorites[order].name %></h5>
+                                        <p>$<%= user.favorites[order].price.currentPrice %></p>
+                                    </div>
+                                    <div class="order_buttons">
+                                        <input type="submit" value="BUY">
+                                        <input type="button" onclick="deleteOrder('<%= order %>', '<%= csrfToken %>')" value="DELETE ORDER">
+                                        <a href="/compareorder/<%= order %>">COMPARE</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <% } } else { %>
+                            <h3>You don't have any order, please make sure products added in right way!</h3>
+                        <% } } else { %>
+                            <h3>You should sign in to get orders!</h3>
+                            <% } %>
+                </div>
+                <div class="profile_settings" id="profile_settings">
+                    <h2 class="profile_alt_title">Settings</h2>
+                    
+                </div>    
+            </div>
+        </div>
+    </div>
+
+    <%- include('partials/footer.ejs') %>
+    <script src="/js/profile.js"></script>
+    <script src="/js/requests.js"></script>
+</body>
+</html>

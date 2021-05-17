@@ -1,0 +1,80 @@
+.body {
+    width: 60%;
+    margin: auto;
+    display: flex;
+    margin-top: 2vw;
+    margin-bottom: 4vw;
+}
+.signin {
+    width: 50%;
+    margin: auto;
+}
+.signup {
+    width: 50%;
+    margin: auto;
+}
+.signup_title {
+    font-family: 'Montserrat',sans-serif;
+    font-size: 1vw;
+    font-weight: bold;
+    color: #454647;
+}
+.body_input {
+    width: 100%;
+    padding: 0.4vw;
+    font-size: 0.9vw;
+    border: 1px solid #e4e4e4;
+    margin-bottom: 1vw;
+}
+.form_submit input {
+    padding: 1vw;
+    font-size: 0.8vw;
+    font-family: 'Montserrat',sans-serif;
+    background: none;
+    border: 2px solid #737373;
+    float: left;
+    transition: background-color 1s;
+    letter-spacing: 0.15;
+    font-weight: 500;
+}
+.form_submit input:hover {
+    background-color: #00c8c8;
+    color: white;
+    cursor: pointer;
+    border: 0.14 solid #00c8c8;
+}
+.forgetpassword {
+    color: #00c8c8;
+    text-decoration: none;
+    font-family: 'Montserrat';
+    font-size: 0.8vw;
+    float: right;
+    margin-top: 1vw;
+    font-weight: 500;
+}
+.agreement {
+    font-family: 'Montserrat';
+    font-size: 0.7vw;
+    font-weight: 600;
+    color: #b8b7b7;
+}
+.form_submit {
+    margin-top: 0.5vw;
+}
+.body_policy {
+    font-family: 'Montserrat';
+    font-size: 0.7vw;
+    font-weight: 600;
+    color: #b8b7b7;
+    float: right;
+    width: 13vw;
+    text-align: center;
+}
+.body_policy a {
+    color: #00c8c8;
+    text-decoration: none;
+}
+.errorMessage {
+    font-family: 'Montserrat',sans-serif;
+    color: rgb(206, 0, 0);
+}

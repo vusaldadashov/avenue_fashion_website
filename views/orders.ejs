@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVENUE FASHION</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/orders.css">
+    <link rel="stylesheet" href="css/responsive/headermobile.css">
+    <link rel="stylesheet" href="css/responsive/footermobile.css">
+    <link rel="stylesheet" href="css/responsive/ordersmobile.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://kit.fontawesome.com/0a81482c91.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!--Head bar currency and cart-->
+    <%- include('partials/header.ejs') %>
+
+<!-- Body of Orders-->
+    <div class="body">
+        <div class="body_container">
+            
+            <% if(user) { if(user.cart.length > 0) { for(let order=0; order < user.cart.length; order++ ) { %>
+            <div class="orders" id="a<%= order %>">
+                <form action="/postorder" method="POST">
+                    <div class="orders_image">
+                    <% if(user.cart[order].images.length > 1) { for(let num = 0; num < user.cart[order].images.length;num++) { %>
+                        <img src="<%= user.cart[order].images[num] %>" alt="">
+                    <% } } else { %>
+                        <img src="<%= user.cart[order].images[0] %>" alt="">
+                        <% } %>
+                    </div>
+                    <div class="orders_details">
+                        <div class="orders_items">
+                            <h5><%= user.cart[order].name %></h5>
+                            <p>$<%= user.cart[order].price.currentPrice %></p>
+                        </div>
+                        <div class="order_buttons">
+                            <input type="submit" value="BUY">
+                            <input type="hidden" name="productIndex" value="<%= order %>">
+                            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                            <input type="button" onclick="deleteOrder('<%= order %>', '<%= csrfToken %>')" value="DELETE ORDER">
+                            <a href="/compareorder/<%= order %>">COMPARE</a>
+                        </div> 
+                    </div>
+                </form>
+            </div>
+            <% } } else{ %>
+                <h3>You don't have any order, please make sure products added in right way!</h3>
+            <% } } else { %>
+                <h3>You should sign in to get orders!</h3>
+                <% } %>
+        </div>
+    </div>
+    
+    <!-- FOOTER OF WEBSITE-->
+    <%- include('partials/footer.ejs') %>
+       <script src="/js/requests.js"></script>
+    
+</body>
+</html>

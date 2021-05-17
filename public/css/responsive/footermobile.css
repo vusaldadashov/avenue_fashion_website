@@ -1,0 +1,58 @@
+@media all and (max-width: 800px) {
+.footer {
+    padding: 0;
+}
+.footer_container {
+    width: 100%;
+}
+.footer_links {
+    width: 100%;
+    flex-direction: column;
+}
+.footer_links div {
+    width: 100%;
+    text-align: center;
+}
+.footer_links h5 {
+    font-size: 5vw;
+}
+.footer_links div ul li a {
+    font-size: 4vw;
+}
+.contact_details ul li {
+    font-size: 4vw;
+}
+.footer_networks {
+    width: 100%;
+    flex-direction: column;
+}
+.award {
+    width: 100%;
+}
+.award h1 {
+    font-size: 5vw;
+}
+.icons {
+    width: 100%;
+}
+.icons ul li {
+    padding: 4vw;
+}
+.icons ul li a {
+    font-size: 5vw;
+}
+.copyright {
+    width: 100%;
+    height: 4vw;
+}
+.copyright_container {
+    width: 90% ;
+}
+.copyright_container p {
+    font-size: 2vw;
+    color: white;
+}
+.copyright_container p:first-child {
+    width: 60%;
+}
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="css/admincss/adminlogin.css">
+</head>
+<body>
+    <div class="body">
+        <form action="/admin/login" method="POST">
+            <div class="signin">
+                <h5>SIGN IN</h5>
+                <input class="body_input" type="email" name="email" class="email" placeholder="Your Email..">
+                <input class="body_input" type="password" name="password" class="password" placeholder="Your Password..">
+                <div class="form_submit">
+                    <input type="submit" value="SIGN IN">
+                    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                </div>
+            </div>
+        </form>
+    </div>
+    
+        
+</body>
+</html>

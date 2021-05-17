@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVENUE FASHION</title>
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/product.css">
+    <link rel="stylesheet" href="/css/responsive/headermobile.css">
+    <link rel="stylesheet" href="/css/responsive/footermobile.css">
+    <link rel="stylesheet" href="/css/responsive/productmobile.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://kit.fontawesome.com/0a81482c91.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!--Head bar currency and cart-->
+    <%- include('partials/header.ejs') %>
+<!-- BODY -->
+    <div class="body">
+        <div class="product_body">
+            <div class="product_image">
+                <img src="<%= product.images[0] %>" alt="product">
+            </div>
+            <div class="product_details">
+                <div class="product_title"><h5><%= product.name %></h5></div>
+                <div class="product_actions">
+                    <div class="rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div class="reviews">
+                        <span>3 Review(s)</span>
+                    </div>
+                    <div class="add_review">
+                        <a href="#">Add a Review</a>
+                    </div>
+                    <div class="share">
+                        <span>Share: </span>
+                        <a class="sharing_link fb_link" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="sharing_link twit_link" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="sharing_link insta_link" href="#"><i class="fab fa-instagram"></i></a>
+                        <a class="sharing_link pin_link" href="#"><i class="fab fa-pinterest"></i></a>
+                        <a class="sharing_link go_plus_link" href=""><i class="fab fa-google-plus-g"></i></a>
+                        <a class="sharing_link mail_link" href=""><i class="far fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="price">
+                    <span class="changed_price"><%= product.price.lastPrice %></span>
+                    <span class="current_price"><%= product.price.currentPrice %></span>
+                </div>
+                <div class="product_condition">
+                    <span class="current_condition">AVAILABILTY : <span class="condition">In stock</span></span>
+                    <span class="product_code">PRODUCT CODE : <span class="condition_code"><%= product.code %></span></span>
+                    <span class="product_tags">TAGS : <span class="condition_tags"><%= product.tags %>></span> </span>
+                </div>
+                <div class="product_quality">
+                    <p class="quality_text"><%= product.description %></p>
+                    <ul class="qualities">
+                        <% for(let quality of product.qualities) { %>
+                        <li><%= quality %></li>
+                        <% } %>
+                    </ul>
+                </div>
+                <div class="product_order">
+                    <form action="/addtocart" method="POST">
+                        <div class="product_types">
+                            <div class="product_color">
+                                <h5>COLOUR</h5>
+                                <select name="prodColor" id="color">
+                                    <option value="zero">Select Colour</option>
+                                    <option value="red">Red</option>
+                                    <option value="green">Green</option>
+                                    <option value="yellow">Yellow</option>
+                                </select>
+                                <div class="product_colors">
+                                    <span>COLOUR</span>
+                                    <a href="#">BLACK</a>
+                                    <a href="#">WHITE</a>
+                                    <a href="#">GREY</a>
+                                    <a href="#">BLUE</a>
+                                </div>
+                            </div>
+                            <div class="product_size">
+                                <h5>SIZE</h5>
+                                <select name="prodSize" id="size">
+                                    <option value="zero">Select Size</option>
+                                    <option value="red">S</option>
+                                    <option value="green">M</option>
+                                    <option value="yellow">L</option>
+                                </select>
+                                <div class="product_colors">
+                                    <span>SIZE</span>
+                                    <a href="#">M</a>
+                                    <a href="#">S</a>
+                                    <a href="#">L</a>
+                                    <a href="#">XL</a>
+                                </div>
+                            </div>
+                            <div class="product_quantity">
+                                <h5>QTY</h5>
+                                <input placeholder="1" type="number" id="quantity" name="prodQuantity" min="1" max="5" >
+                                <div class="product_colors">
+                                    <span>QUANTITY</span>
+                                    <a href="#">1</a>
+                                    <a href="#">2</a>
+                                    <a href="#">3</a>
+                                    <a href="#">4</a>
+                                    <a href="#">5</a>
+                                    <a href="#">MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="adding_orders">
+                            <div class="adding_order">
+                                <div class="addtocart">
+                                    <i class="fas fa-shopping-cart carticon"></i>
+                                    <input class="cartbutton" type="submit" value="ADD TO CART"></input>
+                                    <input type="hidden" value="<%= product._id %>" name="prodId">
+                                    <input type="hidden" value="<%= product.images %>" name="prodImages">
+                                    <input type="hidden" value="<%= product.name %>" name="prodName">
+                                    <input type="hidden" value="<%= product.price.currentPrice %>" name="prodPrice">
+                                    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                                </div>
+                                <div class="addtolookbook"> 
+                                    <i class="far fa-heart"></i>
+                                    <a class="cartbutton" href="/addtolookbook/<%= product._id %>">ADD TO LOOKBOOK</a>
+                                </div>
+                            </div>
+                            <div class="addtocompare"> 
+                                <i class="fas fa-compress-alt"></i>
+                                <a href="/addtocompare/<%= product._id %>" class="cartbutton">ADD TO COMPARE</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="product_extra_body">
+            <ul>
+                <li><a class="extra_body_navlinks link_des" href="">DESCRIPTION</a></li>
+                <li><a class="extra_body_navlinks" href="">VIDEO</a></li>
+                <li><a class="extra_body_navlinks" href="">SIZE & SPECS</a></li>
+                <li><a class="extra_body_navlinks" href="">DELIVERY & RETURNS</a></li>
+                <li><a class="extra_body_navlinks" href="">REVIEWS</a></li>
+            </ul>
+            <h5>Nunc egestas posuere enim, eu maximus erat posuere eget</h5>
+            <p class="product_text">Sed ut mi mollis, consequat nulla lacinia,
+                hendrerit turpis. Nulla sapien magna, 
+                interdum quis pretium nec, pharetra at felis. 
+                Curabitur dictum sapien est, eget ultricies turpis porta vel. 
+                Nam suscipit nec lacus sed imperdiet. Vestibulum a purus risus.
+                Nulla et dictum augue, nec efficitur mi. Nam sit amet pretium elit.
+                Aliquam congue, ligula id vehicula vestibulum, orci ex vulputate lacus, 
+                ac malesuada elit dolor eget ex. Sed quis aliquet risus, ut cursus lectus. 
+                In eget lorem tellus.
+                </p>
+                <p>
+                Quisque eleifend varius nisi nec sagittis. 
+                Nulla ullamcorper imperdiet justo, ut venenatis purus lobortis ut. 
+                Nunc sagittis urna et hendrerit sodales. 
+                Nunc molestie risus nec fringilla lacinia.
+                Nulla facilisi. Etiam neque velit, tristique eget sollicitudin eget,
+                placerat at metus. Proin dictum lobortis velit, 
+                id suscipit orci faucibus ut. Aliquam erat volutpat.
+                Vivamus feugiat justo in diam placerat, id dignissim elit auctor.
+                Vestibulum scelerisque sem et lobortis ultricies. 
+                Morbi suscipit nulla urna. Suspendisse potenti.
+                Nullam varius quam sed nisl dignissim, vel faucibus ipsum blandit. 
+                Vivamus at suscipit augue. Nam finibus gravida lorem eu viverra.
+                Praesent rhoncus imperdiet ultricies. 
+                Nullam pretium cursus augue auctor vulputate. 
+                Quisque a convallis diam commodo eget diam id,
+                eleifend dictum libero. Etiam varius, nisi vel dignissim sodales,
+                enim dui posuere mauris, in aliquet lorem eros eget neque.</p>
+        </div>
+        <div>
+        </div>
+    </div>
+
+    <!-- FOOTER OF WEBSITE-->
+    <%- include('partials/footer.ejs') %>
+
+</body>
+</html>
