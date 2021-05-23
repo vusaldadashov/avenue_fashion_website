@@ -2,7 +2,7 @@ const Product = require('../models/shop')
 const Admin = require('../models/admin')
 const bcrypt = require('bcrypt')
 exports.getAdminLogin = (req,res,next) => {
-    res.render('admin/syslogin')
+    res.render('admin_views/syslogin')
 }
 exports.postAdminLogin = (req,res,next) => {
     console.log('yes');
@@ -60,5 +60,5 @@ exports.postProduct = (req,res,next) => {
     
 }
 exports.getSystemPage = (req,res,next) => {
-    res.render('admin/system')
+    res.render('admin_views/system')
 }
