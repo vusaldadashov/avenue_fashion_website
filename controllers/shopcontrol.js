@@ -117,6 +117,19 @@ exports.deleteOrder = (req,res,next) => {
         console.log(err);
     })
 }
+exports.deleteMyOrder = (req,res,next) => {
+    User.findById({_id:req.session.user._id}).then(user=> {
+        user.orders.splice(req.params.productIndex,1)
+        user.save()
+        req.session.user = user
+        console.log('order deleted');
+        res.json({data: user.orders.length})
+    })
+    .catch(err => {
+        res.json({ error: "Deleting process failed"})
+        console.log(err);
+    })
+}
 exports.postOrders = (req,res,next) => {
     User.findById({ _id: req.session.user._id }).then(user => {
         const product = user.cart[req.body.productIndex]

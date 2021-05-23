@@ -18,7 +18,7 @@ router.get('/orders', shopControl.getOrders)
 router.post('/postorder',shopControl.postOrders)
 
 router.delete('/deleteorder/:productIndex', shopControl.deleteOrder)
-
+router.delete('/deletemyorder/:productIndex', shopControl.deleteMyOrder)
 
 
 router.post('/addtocart', shopControl.postAddToCart)
