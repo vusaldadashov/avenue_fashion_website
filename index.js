@@ -16,7 +16,9 @@ const shoppingRoute = require('./routes/shopping')
 const errorRoute = require('./routes/error')
 app.set('view engine','ejs')
 app.set('views','views')
-mongoose.connect(mongo_url).then(()=> {
+mongoose.connect(mongo_url, {
+    dbName: 'myFirstDatabase'
+    ).then(()=> {
     console.log('connected');
 })
 
