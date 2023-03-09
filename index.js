@@ -8,7 +8,7 @@ const csrf = require('csurf')
 const csrfProtection = csrf()
 const session = require('express-session')
 const MongoDbStore = require('connect-mongodb-session')(session)
-const mongo_url = 'mongodb+srv://vusaldadashov:GU4z5gRZFKIGyq4M@cluster0.leql5.mongodb.net/myFirstDatabase'
+const mongo_url = 'mongodb+srv://vusaldadashov:AP5B9fCy2JiUD0oC@cluster0.leql5.mongodb.net/?retryWrites=true&w=majority'
 const mongoose = require('mongoose')
 const adminRoute = require('./routes/admin')
 const authRoute = require('./routes/auth')
