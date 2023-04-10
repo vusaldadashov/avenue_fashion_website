@@ -18,7 +18,8 @@ app.set('view engine','ejs')
 app.set('views','views')
 mongoose.connect(mongo_url, {
     dbName: 'myFirstDatabase'
-    ).then(()=> {
+})
+    .then(()=> {
     console.log('connected');
 })
 
